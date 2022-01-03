@@ -27,7 +27,9 @@ function validatePositive() {
 }
 
 function compute() {
-   
+
+    var principal = document.getElementById("principal").value;
+
     if (principal.length == 0 ||principal <= 0) {
         alert("Enter a positive number");
         document.getElementById("principal").focus();
