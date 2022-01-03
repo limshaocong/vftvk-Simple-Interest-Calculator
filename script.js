@@ -24,5 +24,5 @@ function validatePositive() {
         return false
     }
     
-    compute()
+    return compute()
 }
