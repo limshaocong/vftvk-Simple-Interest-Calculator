@@ -1,4 +1,4 @@
-function compute() {
+function output() {
     var principal = document.getElementById("principal").value;
     var rate = document.getElementById("rate").value;
     var years = document.getElementById("years").value;
@@ -16,13 +16,24 @@ function updateRate() {
 
 function validatePositive() {
     
-    var principal = parseInt(document.getElementById("principal").value);
+    var principal = document.getElementById("principal").value;
    
-    if (principal <= 0) {
+    if (principal.length == 0 ||principal <= 0) {
         alert("Enter a positive number");
         document.getElementById("principal").focus();
         return false
     }
-    
-    return compute()
+
+}
+
+function compute() {
+   
+    if (principal.length == 0 ||principal <= 0) {
+        alert("Enter a positive number");
+        document.getElementById("principal").focus();
+        return false
+    } else {
+        return output()
+    }
+
 }
