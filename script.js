@@ -1,9 +1,9 @@
 function output() {
-    var principal = document.getElementById("principal").value;
-    var rate = document.getElementById("rate").value;
-    var years = document.getElementById("years").value;
-    var interest = principal * years * rate /100;
-    var year = new Date().getFullYear() + parseInt(years);
+    principal = document.getElementById("principal").value;
+    rate = document.getElementById("rate").value;
+    years = document.getElementById("years").value;
+    interest = principal * years * rate /100;
+    year = new Date().getFullYear() + parseInt(years);
 
     document.getElementById("result").innerHTML = "Interest : If you deposit <mark>" + principal + "</mark>,<br/>" +
         "at an interest rate of <mark>" + rate + "</mark>,<br/>" +
@@ -16,7 +16,7 @@ function updateRate() {
 
 function validatePositive() {
     
-    var principal = document.getElementById("principal").value;
+    principal = document.getElementById("principal").value;
    
     if (principal.length == 0 ||principal <= 0) {
         alert("Enter a positive number");
@@ -28,12 +28,13 @@ function validatePositive() {
 
 function compute() {
 
-    var principal = document.getElementById("principal").value;
+    principal = document.getElementById("principal").value;
 
     if (principal.length == 0 ||principal <= 0) {
         alert("Enter a positive number");
         document.getElementById("principal").focus();
         return false
+    
     } else {
         return output()
     }
