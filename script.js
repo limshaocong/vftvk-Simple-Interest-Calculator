@@ -17,11 +17,12 @@ function updateRate() {
 function validatePositive() {
     
     var principal = parseInt(document.getElementById("principal").value);
-    var checkPositive = principal > 0;
-    
-    if (!checkPositive) {
+   
+    if (principal <= 0) {
         alert("Enter a positive number");
         document.getElementById("principal").focus();
         return false
     }
+    
+    compute()
 }
